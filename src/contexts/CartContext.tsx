@@ -1,8 +1,8 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { Cart, CartItem, Customer } from "@/types";
+import React, { createContext, useContext, useState, useEffect, type ReactNode } from "react";
+import type { Cart, CartItem, Customer } from "@/types";
 import { generateId } from "@/lib/utils";
 import { useOffline } from "./OfflineContext";
-import apiService from "@/services/api";
+// import apiService from "@/services/api";
 
 interface CartContextType {
   carts: Cart[];

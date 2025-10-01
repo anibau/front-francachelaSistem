@@ -1,5 +1,5 @@
-import axios, { AxiosInstance, AxiosResponse } from "axios";
-import { ApiResponse, PaginatedResponse, User, Product, Customer, Sale } from "@/types";
+import axios, { type AxiosInstance } from "axios";
+import type { PaginatedResponse, User, Product, Customer, Sale } from "@/types";
 
 class ApiService {
   private api: AxiosInstance;
