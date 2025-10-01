@@ -43,19 +43,19 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   }, []);
 
   return (
-    <header className="bg-white border-b border-gray-200 z-30">
+    <header className="bg-card border-b border-border z-30">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <button
               type="button"
-              className="text-gray-500 hover:text-gray-600 lg:hidden"
+              className="text-muted-foreground hover:text-foreground"
               onClick={onMenuClick}
             >
               <Menu className="h-6 w-6" />
             </button>
             <Link to="/" className="flex-shrink-0 flex items-center ml-4 lg:ml-0">
-              <span className="text-xl font-bold text-blue-600">Francachela</span>
+              <span className="text-xl font-bold text-primary">Francachela</span>
             </Link>
           </div>
 
@@ -66,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                 variant="ghost"
                 size="sm"
                 className={`flex items-center gap-1 ${
-                  isOfflineMode ? "text-orange-600" : "text-gray-500"
+                  isOfflineMode ? "text-orange-600" : "text-muted-foreground"
                 }`}
                 onClick={toggleOfflineMode}
               >
@@ -99,24 +99,24 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
               </Button>
               
               {notificationsOpen && (
-                <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg py-1 z-10 border">
-                  <div className="px-4 py-2 border-b">
-                    <h3 className="text-sm font-medium">Notificaciones</h3>
+                <div className="absolute right-0 mt-2 w-80 bg-card rounded-md shadow-lg py-1 z-10 border border-border">
+                  <div className="px-4 py-2 border-b border-border">
+                    <h3 className="text-sm font-medium text-foreground">Notificaciones</h3>
                   </div>
                   <div className="max-h-96 overflow-y-auto">
-                    <div className="px-4 py-2 hover:bg-gray-50">
-                      <p className="text-sm">Stock bajo: Cerveza Cristal 650ml</p>
-                      <p className="text-xs text-gray-500">Hace 5 minutos</p>
+                    <div className="px-4 py-2 hover:bg-accent">
+                      <p className="text-sm text-foreground">Stock bajo: Cerveza Cristal 650ml</p>
+                      <p className="text-xs text-muted-foreground">Hace 5 minutos</p>
                     </div>
-                    <div className="px-4 py-2 hover:bg-gray-50">
-                      <p className="text-sm">Nuevo pedido de delivery #1234</p>
-                      <p className="text-xs text-gray-500">Hace 20 minutos</p>
+                    <div className="px-4 py-2 hover:bg-accent">
+                      <p className="text-sm text-foreground">Nuevo pedido de delivery #1234</p>
+                      <p className="text-xs text-muted-foreground">Hace 20 minutos</p>
                     </div>
                   </div>
-                  <div className="px-4 py-2 border-t text-center">
+                  <div className="px-4 py-2 border-t border-border text-center">
                     <Link
                       to="/notifications"
-                      className="text-sm text-blue-600 hover:text-blue-700"
+                      className="text-sm text-primary hover:text-primary/80"
                       onClick={() => setNotificationsOpen(false)}
                     >
                       Ver todas
@@ -138,27 +138,27 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
               </Button>
               
               {userMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border">
-                  <div className="px-4 py-2 border-b">
-                    <p className="text-sm font-medium">{user?.name}</p>
-                    <p className="text-xs text-gray-500">{user?.email}</p>
+                <div className="absolute right-0 mt-2 w-48 bg-card rounded-md shadow-lg py-1 z-10 border border-border">
+                  <div className="px-4 py-2 border-b border-border">
+                    <p className="text-sm font-medium text-foreground">{user?.name}</p>
+                    <p className="text-xs text-muted-foreground">{user?.email}</p>
                   </div>
                   <Link
                     to="/profile"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
                     onClick={() => setUserMenuOpen(false)}
                   >
                     Perfil
                   </Link>
                   <Link
                     to="/settings"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-accent"
                     onClick={() => setUserMenuOpen(false)}
                   >
                     Configuración
                   </Link>
                   <button
-                    className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-50"
+                    className="block w-full text-left px-4 py-2 text-sm text-destructive hover:bg-accent"
                     onClick={() => {
                       logout();
                       setUserMenuOpen(false);
@@ -180,4 +180,3 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
 };
 
 export default Navbar;
-

@@ -7,6 +7,14 @@ import DashboardPage from "@/pages/dashboard/DashboardPage";
 import POSPage from "@/pages/pos/POSPage";
 import ProductsPage from "@/pages/products/ProductsPage";
 import ProductForm from "@/pages/products/ProductForm";
+import PromotionsPage from "@/pages/promotions/PromotionsPage";
+import CustomersPage from "@/pages/customers/CustomersPage";
+import DeliveryPage from "@/pages/delivery/DeliveryPage";
+import CashRegisterPage from "@/pages/cash-register/CashRegisterPage";
+import ExpensesPage from "@/pages/expenses/ExpensesPage";
+import PointsPage from "@/pages/points/PointsPage";
+import ReportsPage from "@/pages/reports/ReportsPage";
+import SettingsPage from "@/pages/settings/SettingsPage";
 
 // Protected Route Component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -93,35 +101,35 @@ export const router = createBrowserRouter([
       },
       {
         path: "promotions",
-        element: <PlaceholderPage title="Promociones" />,
+        element: <PromotionsPage />,
       },
       {
         path: "customers",
-        element: <PlaceholderPage title="Clientes" />,
+        element: <CustomersPage />,
       },
       {
         path: "delivery",
-        element: <PlaceholderPage title="Delivery" />,
+        element: <DeliveryPage />,
       },
       {
         path: "cash-register",
-        element: <PlaceholderPage title="Caja" />,
+        element: <CashRegisterPage />,
       },
       {
         path: "expenses",
-        element: <PlaceholderPage title="Gastos" />,
+        element: <ExpensesPage />,
       },
       {
         path: "points",
-        element: <PlaceholderPage title="Puntos" />,
+        element: <PointsPage />,
       },
       {
         path: "reports",
-        element: <PlaceholderPage title="Reportes" />,
+        element: <ReportsPage />,
       },
       {
         path: "settings",
-        element: <PlaceholderPage title="Configuración" />,
+        element: <SettingsPage />,
       },
       {
         path: "profile",
@@ -138,4 +146,3 @@ export const router = createBrowserRouter([
     element: <Navigate to="/" replace />,
   },
 ]);
-
