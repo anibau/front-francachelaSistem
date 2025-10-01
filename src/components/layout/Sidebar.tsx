@@ -98,15 +98,15 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 transform transition-transform duration-200 ease-in-out lg:translate-x-0 lg:static lg:inset-auto lg:z-auto",
+          "fixed inset-y-0 left-0 z-50 w-64 bg-card border-r border-border shadow-lg transform transition-transform duration-300 ease-in-out",
           open ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        <div className="flex items-center justify-between h-16 px-6 border-b">
-          <span className="text-xl font-bold text-blue-600">Francachela</span>
+        <div className="flex items-center justify-between h-16 px-6 border-b border-border">
+          <span className="text-xl font-bold text-primary">Francachela</span>
           <button
             type="button"
-            className="text-gray-500 hover:text-gray-600 lg:hidden"
+            className="text-muted-foreground hover:text-foreground"
             onClick={() => setOpen(false)}
           >
             <X className="h-6 w-6" />
@@ -121,10 +121,10 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
                   to={item.path}
                   className={({ isActive }) =>
                     cn(
-                      "flex items-center px-4 py-2 text-sm rounded-md",
+                      "flex items-center px-4 py-2 text-sm rounded-md transition-colors",
                       isActive
-                        ? "bg-blue-600 text-white"
-                        : "text-gray-700 hover:bg-gray-100"
+                        ? "bg-primary text-primary-foreground"
+                        : "text-foreground hover:bg-accent hover:text-accent-foreground"
                     )
                   }
                   onClick={() => setOpen(false)}
@@ -142,4 +142,3 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
 };
 
 export default Sidebar;
-

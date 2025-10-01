@@ -13,10 +13,12 @@ const MainLayout: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
+      {/* Sidebar - Always overlay, never pushes content */}
       <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
       
-      <div className="lg:pl-64">
+      {/* Main content area - Always full width */}
+      <div className="w-full">
         <Navbar onMenuClick={() => setSidebarOpen(true)} />
         
         <main className="py-6">
@@ -30,4 +32,3 @@ const MainLayout: React.FC = () => {
 };
 
 export default MainLayout;
-

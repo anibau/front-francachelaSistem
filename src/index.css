@@ -2,25 +2,31 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Francachela Brand Colors */
+    --francachela-primary: 320 25% 28%;     /* #533745 */
+    --francachela-secondary: 35 35% 72%;    /* #D0B59F */
+    --francachela-accent: 35 35% 87%;       /* #E4D5C8 */
+    
+    /* Theme Colors based on Francachela palette */
+    --background: 35 35% 95%;               /* Light cream background */
+    --foreground: 320 25% 15%;              /* Dark purple text */
+    --card: 0 0% 100%;                      /* White cards */
+    --card-foreground: 320 25% 15%;         /* Dark purple card text */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --popover-foreground: 320 25% 15%;
+    --primary: 320 25% 28%;                 /* #533745 - Main brand color */
+    --primary-foreground: 0 0% 100%;        /* White text on primary */
+    --secondary: 35 35% 72%;                /* #D0B59F - Secondary brand color */
+    --secondary-foreground: 320 25% 15%;    /* Dark text on secondary */
+    --muted: 35 35% 87%;                    /* #E4D5C8 - Accent color for muted elements */
+    --muted-foreground: 320 25% 40%;        /* Muted text */
+    --accent: 35 35% 87%;                   /* #E4D5C8 - Accent color */
+    --accent-foreground: 320 25% 15%;       /* Dark text on accent */
+    --destructive: 0 84.2% 60.2%;           /* Red for destructive actions */
+    --destructive-foreground: 0 0% 100%;    /* White text on destructive */
+    --border: 35 35% 80%;                   /* Light border */
+    --input: 35 35% 85%;                    /* Input background */
+    --ring: 320 25% 28%;                    /* Focus ring - primary color */
     --radius: 0.5rem;
     
     font-family: 'Inter', system-ui, sans-serif;
@@ -33,25 +39,26 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 94.1%;
+    /* Dark theme with Francachela colors */
+    --background: 320 25% 8%;               /* Very dark purple background */
+    --foreground: 35 35% 90%;               /* Light cream text */
+    --card: 320 25% 12%;                    /* Dark purple cards */
+    --card-foreground: 35 35% 90%;          /* Light cream card text */
+    --popover: 320 25% 12%;
+    --popover-foreground: 35 35% 90%;
+    --primary: 35 35% 72%;                  /* #D0B59F - Secondary becomes primary in dark */
+    --primary-foreground: 320 25% 8%;       /* Dark text on primary */
+    --secondary: 320 25% 20%;               /* Darker version of primary */
+    --secondary-foreground: 35 35% 90%;     /* Light text on secondary */
+    --muted: 320 25% 15%;                   /* Dark muted background */
+    --muted-foreground: 35 35% 70%;         /* Muted light text */
+    --accent: 35 35% 87%;                   /* #E4D5C8 - Keep accent bright */
+    --accent-foreground: 320 25% 8%;        /* Dark text on accent */
+    --destructive: 0 62.8% 50%;             /* Slightly darker red */
+    --destructive-foreground: 0 0% 100%;    /* White text on destructive */
+    --border: 320 25% 18%;                  /* Dark border */
+    --input: 320 25% 15%;                   /* Dark input background */
+    --ring: 35 35% 72%;                     /* Light ring for focus */
   }
 
   * {
